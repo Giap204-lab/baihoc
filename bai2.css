@@ -1,0 +1,12 @@
+#box {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    transition: all 0.5s;
+}
+#box:hover {
+    width: 100x;
+    height: 100px;
+    border-radius: 35%;
+    background-color: aqua;
+}

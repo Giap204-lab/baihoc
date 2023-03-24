@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+}
+#box {
+    background-color: #ff0000;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+}
+.column {
+    background-color: aqua;
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+    border-radius: 30px;
+}
+
+.row::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+@media (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+#shadow {
+    font-size: 30px;
+    font-weight: 300px;
+    color: #ff0000;
+    text-shadow: 5px 5px 5px blue;
+}
+.box-shadow {
+    border: 10px #ff0000;
+    border-top-color: #ff0000;
+    border-left-color: #ff0000;
+    padding: 20px blue;
+
+    margin-bottom: 50px;
+    font-size: 50px;
+    box-shadow: 10px 10px 10px blue, -10px -20px -10px gold;
+}
+#color {
+    color: aqua;
+    font-size: 50px;
+
+    animation-name: example;
+    animation-duration: 20s;
+}
+@keyframes example {
+    0% {
+        color: red;
+        left: 0px;
+        top: 0px;
+    }
+    25% {
+        color: yellow;
+        left: 200px;
+        top: 0px;
+    }
+    50% {
+        color: blue;
+        left: 200px;
+        top: 200px;
+    }
+    75% {
+        color: green;
+        left: 0px;
+        top: 200px;
+    }
+    100% {
+        color: red;
+        left: 0px;
+        top: 0px;
+    }
+}
+.column {
+    position: relative;
+    animation-name: example;
+    animation-duration: 10s;
+    -o-animation-direction: reverse;
+    animation-iteration-count: infinite;
+}
+@keyframes example {
+    0% {
+        background-color: #ff0000;
+        left: -%;
+        top: 0px;
+    }
+    50%{
+        background-color: palegreen;
+        left: 100%;
+        top: 0px;
+    }
+
+    
+    }
+    100% {
+        background-color: yellow;
+        left: -100%;
+        top: 200px;
+    }
+}
